@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>iFirst App | Welcome</title>
+		<meta name="description" content="How do you feel when you [get,do,buy,win,] something really cool for the very first time! Awesome right? iFirst App prepares a platform for you to express your excitment and feelings so your friends, family and loved ones could rejoice with you. Be yourself, use iFirst App today!" />
+		<meta name="keywords" content="First, App, First App, Love, Wife, Car, Son, Daughter, Mansion, Girlfriend, Kiss" />
+		<meta name="author" content="Ogunde Kehinde and Taiwo" />
+		<link rel="shortcut icon" href="../favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/ifirstapp.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<style type="text/css">
+					/*TYPED JS*/
+			.typed-cursor{
+			    opacity: 1;
+			    -webkit-animation: blink 0.7s infinite;
+			    -moz-animation: blink 0.7s infinite;
+			    animation: blink 0.7s infinite;
+			}
+			@keyframes blink{
+			    0% { opacity:1; }
+			    50% { opacity:0; }
+			    100% { opacity:1; }
+			}
+			@-webkit-keyframes blink{
+			    0% { opacity:1; }
+			    50% { opacity:0; }
+			    100% { opacity:1; }
+			}
+			@-moz-keyframes blink{
+			    0% { opacity:1; }
+			    50% { opacity:0; }
+			    100% { opacity:1; }
+			}
+			/*TYPED JS*/
+		</style>
+		<!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load --> 
+		<script src="js/modernizr.custom.25376.js"></script>
+	</head>
+	<body>
+		<div id="perspective" class="perspective effect-rotatetop">
+			<div class="container">
+				<div class="wrapper"><!-- wrapper needed for scroll -->
+
+				<!-- Top Navigation -->
+					<div class="codrops-top clearfix">
+						<a class="codrops-icon codrops-icon-world" href="#"><span>Quick Start</span></a>
+						<span class="right"><a class="codrops-icon codrops-icon-drop" href="#"><span>About iFirst.</span></a></span>
+					</div>
+					<header class="codrops-header">
+						<h1>iFirst App </h1><span >...express your</span><span id="typed"> excitment...</span>
+					</header>
+
+					<div class="main clearfix">
+						<div class="column">
+							<p><button id="showMenu">Browse</button></p>
+							<p>How do you feel the very first time you <e id="typedagain">bought</e></p>
+						</div>
+						<div class="column">
+							<!-- LOGIN FORM -->
+							<p><button class="facebook">Sign in with facebook</button></p>
+							<p class="or">or</p>
+
+							<form id="loginForm" action="#/" method="post">
+								<p><input type="text" name="username" placeholder="Email/Username" required /></p>
+								<p><input type="password" name="password" placeholder="Password" required /></p>
+								<p><input type="submit" name="submit" value="Login" /></p>
+							</form>
+						</div>
+					</div><!-- /main -->
+				</div><!-- wrapper -->
+			</div><!-- /container -->
+			<nav class="outer-nav bottom horizontal">
+				<div>my very first...</div>
+				<a href="#" class="icon-news"> Kiss</a>
+				<a href="#" class="icon-news">News</a>
+				<a href="#" class="icon-image">Images</a>
+				<a href="#" class="icon-upload">Uploads</a>
+				<a href="#" class="icon-star">Favorites</a>
+				<a href="#" class="icon-mail">Messages</a>
+				<a href="#" class="icon-lock">Others</a>
+			</nav>
+		</div><!-- /perspective -->
+
+		<!-- Get jQuery -->
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	    <script src="js/jquery.serializeObject.min.js"></script>
+	    <script src="js/typed.js" type="text/javascript"></script>
+	    <script>
+	    $(function(){
+
+	    	$("#loginForm").submit(function(e){
+	    		console.log($(this).serializeObject());
+	    		return false;
+	    	});
+
+	        $("#typed").typed({
+	            strings: [" excitment...", " ^1000 happiness...", " true ^1000 feelings...", "self..."],
+	            //stringsElement: $('#typed-strings'),
+	            typeSpeed: 40,
+	            backDelay: 500,
+	            loop: true,
+	            contentType: 'html', // or text
+	            // defaults to false for infinite loop
+	            loopCount: false,
+	            callback: function(){ foo(); },
+	            resetCallback: function() { newTyped(); }
+	        });
+
+	        $(".reset").click(function(){
+	            $("#typed").typed('reset');
+	        });
+
+	        $("#typedagain").typed({
+	            strings: ["bought yourself a smart Ferarri ^2000", "find yourself a super stunning wife ^3000", "throw yourself a million dollar birthday party ^2000", "hop on the plane and fly to paris ^4000", "seal that multi-million dollar project ^2000", "do something supercoooOOOL ^5000"],
+	            //stringsElement: $('#typed-strings'),
+	            typeSpeed: 30,
+	            backDelay: 500,
+	            loop: true,
+	            contentType: 'html', // or text
+	            // defaults to false for infinite loop
+	            loopCount: false,
+	            callback: function(){ foo(); },
+	            resetCallback: function() { newTyped(); }
+	        });
+
+	        $(".reset").click(function(){
+	            $("#typed").typed('reset');
+	        });
+
+	    });
+
+	    function newTyped(){ /* A new typed object */ }
+
+	    function foo(){ console.log("Callback"); }
+
+	    </script>
+		<script src="js/classie.js"></script>
+		<script src="js/menu.js"></script>
+	</body>
+</html>
