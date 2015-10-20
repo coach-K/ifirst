@@ -1,0 +1,15 @@
+{
+  "name": "Ifirst",
+  "description": "How do you feel when you [get,do,buy,win,] something really cool for the very first time! Awesome right? iFirst App prepares a platform for you to express your excitment and feelings so your friends, family and loved ones could rejoice with you. Be yourself, use iFirst App today!",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "images/icons/icon16x16.png",
+    "48": "images/icons/icon48x48.png",
+    "60": "images/icons/icon60x60.png",
+    "128": "images/icons/icon128x128.png"
+  },
+  "developer": {
+    "name": "Ogunde Kehinde, Susan Esho",
+    "url": "http://codekenn.github.io/ifirst"
+  }
+}
