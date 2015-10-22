@@ -198,11 +198,25 @@ input[type="text"], input[type="email"], input[type="password"] {
 }
 
 button.facebook {
-	background: #4A7DB7 none repeat scroll 0% 0%;
+	background: #3a5795 none repeat scroll 0% 0%;
 }
 
 button.facebook:hover {
-	background: #668EBD none repeat scroll 0% 0%;
+	background: #4A7DB7 none repeat scroll 0% 0%;
+}
+
+button.twitter {
+	background-color: #55acee none repeat scroll 0% 0%;;
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+	border: 1px solid #3b88c3;
+}
+
+button.twitter:hover {
+	background-color: #0084b4 none repeat scroll 0% 0%;
+}
+
+button.google {
+	background-color:	#db4437;
 }
 
 .related {
@@ -233,7 +247,7 @@ button.facebook:hover {
 		width: 100%;
 		min-width: auto;
 		min-height: 0;
-		padding: 2em; 
+		padding: 2em;
 		text-align: center;
 	}
 
@@ -262,4 +276,3 @@ button.facebook:hover {
 	}
 
 }
-
