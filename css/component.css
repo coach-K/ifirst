@@ -312,18 +312,6 @@ html, body, .perspective {
 	transition-delay: 0.24s;
 }
 
-/* Effect Rotate Left */
-.effect-rotateleft {
-	background: #e96e4f;
-}
-
-.effect-rotateleft .container {
-	-webkit-transition: -webkit-transform 0.4s;
-	transition: transform 0.4s;
-	-webkit-transform-origin: 0% 50%;
-	transform-origin: 0% 50%;
-}
-
 .effect-rotateleft .container::after {
 	background: rgba(255,255,255,0.6);
 }

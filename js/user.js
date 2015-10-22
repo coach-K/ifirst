@@ -68,20 +68,40 @@ var User = function(){
 
     //handle returned promise
     this.handleAuthResponse = function(promise, route) {
+		//show loading notification // can be modified.
+		var loadingNotify = $.notify(
+		{
+			title: '<strong>Loading</strong>',
+			message: '...'
+		}, 
+		{ 
+			type: 'info',
+			allow_dismiss: false,
+			showProgressbar: true
+		});
+        
         $.when(promise)
             .then(function (authData) {
 
-            // goto route
+            // goto route aka url
+            console.log("goto " + route);
 
         }, function (err) {
 
-            // throw error
+            // //show error notification // can be modified.
+			$.notify(
+			{
+				title: '<strong> Oops! </strong>',
+				message: err.message
+			}, 
+			{ 
+				type: 'danger',
+				allow_dismiss: true
+			});
+
+            loadingNotify.close();
 
         });
-    };
-
-    this.login = function(){
-    	return "LOGIN!"
     };
 
 

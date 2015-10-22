@@ -9,8 +9,9 @@
 		<meta name="keywords" content="First, App, First App, Love, Wife, Car, Son, Daughter, Mansion, Girlfriend, Kiss" />
 		<meta name="author" content="Ogunde Kehinde and Taiwo" />
 		<meta name="contributors" content=".." />
-		<link rel="shortcut icon" href="../favicon.ico">
+		<!-- <link rel="shortcut icon" href="../favicon.ico"> -->
 
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/ifirstapp.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
@@ -40,7 +41,6 @@
 			/*TYPED JS*/
 		</style>
 		<!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load --> 
-		<script src="js/modernizr.custom.25376.js"></script>
 	</head>
 	<body>
 		<div id="perspective" class="perspective effect-rotatetop">
@@ -67,9 +67,9 @@
 							<p class="or">or</p>
 
 							<form id="loginForm" method="post">
-								<p><input type="text" name="username" placeholder="Email/Username" required /></p>
+								<p><input type="text" name="email" placeholder="Email" required /></p>
 								<p><input type="password" name="password" placeholder="Password" required /></p>
-								<p><input type="submit" name="submit" value="Login" /></p>
+								<p><input type="submit" data-anim="la-anim-10" name="submit" value="Login" /></p>
 							</form>
 						</div>
 					</div><!-- /main -->
@@ -88,64 +88,19 @@
 		</div><!-- /perspective -->
 
 		<!-- Get jQuery -->
+		<script src="js/modernizr.custom.25376.js"></script>
 	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	    <script src="js/jquery.serializeObject.min.js"></script>
 	    <script src="js/typed.js" type="text/javascript"></script>
+		<script src="js/classie.js" type="text/javascript"></script>
+		<script src="js/menu.js" type="text/javascript"></script>
+		<script src="js/bootstrap-notify.min.js" type="text/javascript"></script>
 	    <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+
 	    <script src="js/ifirst.js" type="text/javascript"></script>
-	    <script src="js/user.js" type="text/javascript"></script>
-	    <script>
-	    $(function(){
+	    <script src="js/user.js" type="text/javascript"></script>	    
+	    <script src="js/session.js" type="text/javascript"></script>	    
+		<script src="js/index.js" type="text/javascript"></script>
 
-	    	$("#loginForm").submit(function(e){
-	    		console.log($(this).serializeObject());
-	    		var theUser = new User();
-	    		console.log(theUser.login());
-	    		return false;
-	    	});
-
-	        $("#typed").typed({
-	            strings: [" excitment...", " ^1000 happiness...", " true ^1000 feelings...", "self..."],
-	            //stringsElement: $('#typed-strings'),
-	            typeSpeed: 40,
-	            backDelay: 500,
-	            loop: true,
-	            contentType: 'html', // or text
-	            // defaults to false for infinite loop
-	            loopCount: false,
-	            callback: function(){ foo(); },
-	            resetCallback: function() { newTyped(); }
-	        });
-
-	        $(".reset").click(function(){
-	            $("#typed").typed('reset');
-	        });
-
-	        $("#typedagain").typed({
-	            strings: ["bought yourself a smart Ferarri ^2000", "find yourself a super stunning wife ^3000", "throw yourself a million dollar birthday party ^2000", "hop on the plane and fly to paris ^4000", "seal that multi-million dollar project ^2000", "do something supercoooOOOL ^5000"],
-	            //stringsElement: $('#typed-strings'),
-	            typeSpeed: 30,
-	            backDelay: 500,
-	            loop: true,
-	            contentType: 'html', // or text
-	            // defaults to false for infinite loop
-	            loopCount: false,
-	            callback: function(){ foo(); },
-	            resetCallback: function() { newTyped(); }
-	        });
-
-	        $(".reset").click(function(){
-	            $("#typed").typed('reset');
-	        });
-
-	    });
-
-	    function newTyped(){ /* A new typed object */ }
-
-	    function foo(){ /* A new callback function */ }
-
-	    </script>
-		<script src="js/classie.js"></script>
-		<script src="js/menu.js"></script>
 	</body>
 </html>
