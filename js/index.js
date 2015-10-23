@@ -14,6 +14,21 @@ $(function(){
 		e.preventDefault();
 		theUser.handleAuthResponse(loginPromise, 'profile');
 	});
+	//register button
+	$("#signupform").submit(function(e){
+		var newusersAndPass = $(this).serializeObject();
+		var loginPromise = theUser.createUser(newusersAndPass);
+		e.preventDefault();
+		theUser.handleAuthResponse(loginPromise, 'profile');
+	});
+
+//social networks
+	$('.bt-social').click(function(e){
+			var provider = $(this).data('provider');
+			e.preventDefault();
+			var socialLoginPromise =theUser.thirdPartyLogin(provider);
+			theUser.handleAuthResponse(socialLoginPromise, 'profile');
+    });
 
 	//TYPED EFFECT
     $("#typed").typed({

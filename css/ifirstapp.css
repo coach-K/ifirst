@@ -151,8 +151,9 @@ a:hover, a:focus {
 
 p.or {
 	padding-left: 2%;
-	color: rgb(149, 145, 145);
+	color: #fff;
 	font-size: 100%;
+	font-weight: bolder;
 }
 
 .codrops-demos a,
@@ -180,7 +181,7 @@ button, input[type="submit"] {
 
 button, input[type="submit"] {
 	font-size: 75%;
-	background: rgb(19, 152, 237) none repeat scroll 0% 0%
+	background: #db4437;
 }
 
 button:hover,
@@ -198,11 +199,29 @@ input[type="text"], input[type="email"], input[type="password"] {
 }
 
 button.facebook {
-	background: #4A7DB7 none repeat scroll 0% 0%;
+	background: #3a5795 none repeat scroll 0% 0%;
 }
 
 button.facebook:hover {
-	background: #668EBD none repeat scroll 0% 0%;
+	background: #4A7DB7 none repeat scroll 0% 0%;
+}
+
+button.twitter {
+	background-color: #55acee;
+	border: 1px solid #3b88c3;
+}
+
+button.twitter:hover {
+	background-color: #0084b4;
+}
+
+.reg {
+	color:	#fff;
+	font-weight: bolder;
+}
+
+.loginform {
+	background-color: #db4437;
 }
 
 .related {
@@ -233,7 +252,7 @@ button.facebook:hover {
 		width: 100%;
 		min-width: auto;
 		min-height: 0;
-		padding: 2em; 
+		padding: 2em;
 		text-align: center;
 	}
 
@@ -262,4 +281,3 @@ button.facebook:hover {
 	}
 
 }
-
