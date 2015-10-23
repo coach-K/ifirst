@@ -60,21 +60,28 @@
 						<div class="column">
 							<p><button id="showMenu">Browse</button></p>
 							<p>How do you feel the very first time you <e id="typedagain">bought</e></p>
+							<p class="reg">REGSTER HERE!!</p>
+
+							<form id="signupform" method="post">
+								<p><input type="text" name="email" placeholder="Email" required /></p>
+								<p><input type="password" name="password" placeholder="Password" required /></p>
+								<p><input type="submit" data-anim="la-anim-10" name="submit" value="Register" /></p>
+							</form>
 						</div>
+
 						<div class="column">
 
 							<!-- THIRD PARTY LOGIN -->
-							<p><button class="facebook" provider= "facebook" data-provider = "facebook" id="facebook">Sign in with facebook</button></p>
-							<p class="or">or</p>
-							<p><button class="twitter" id="twitter">Sign in with Twitter</button></p>
-							<p class="or">or</p>
-							<p><button class="google" id= "google">Sign in with Google</button></p>
-						
+							<p><button class="facebook bt-social" data-provider = "facebook" id="facebook">Sign in with facebook</button></p>
+							<p class="or">OR</p>
+							<p><button class="twitter bt-social" data-provider ="twitter" id="twitter">Sign in with Twitter</button></p>
+							<p class="or">OR LOGIN</p>
+
 							<!-- LOGIN -->
 							<form id="loginForm" method="post">
 								<p><input type="text" name="email" placeholder="Email" required /></p>
 								<p><input type="password" name="password" placeholder="Password" required /></p>
-								<p><input type="submit" data-anim="la-anim-10" name="submit" value="Login" /></p>
+								<p><input type="submit" class="loginform" data-anim="la-anim-10" name="submit" value="Login" /></p>
 							</form>
 						</div>
 					</div><!-- /main -->
