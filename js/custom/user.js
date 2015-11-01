@@ -87,24 +87,24 @@ var User = function(){
            		if(authData != undefined){
 	            	switch(authData.provider){
 	            		case "facebook":
-	            			sessionStorage.uid = authData.uid;
 
 				            user.uid = authData.uid; 
 				            user.name = authData.facebook.displayName; 
 				            user.imageURL = authData.facebook.profileImageURL
-
-				            sessionStorage.setItem("userone",JSON.stringify(user));
+				            user.provider = authData.provider;
+				            user.gender = authData.facebook.cachedUserProfile.gender;
+				            user.profileURL = authData.facebook.cachedUserProfile.link;
 			            	var theUser = new User(); theUser.getRef().child("users").child(user.uid).child("profile_information").set(user);
-
+			            	
 	            			break;
 	            		case "twitter":
-	            			sessionStorage.uid = authData.uid;
 
 				            user.uid = authData.uid; 
 				            user.name = authData.twitter.displayName; 
-				            user.imageURL = authData.twitter.profileImageURL
-
-				            sessionStorage.setItem("userone",JSON.stringify(user));
+				            user.imageURL = String(authData.twitter.profileImageURL).replace("_normal","");
+				            user.provider = authData.provider;
+				            user.username = authData.twitter.username;
+				            user.profileURL = "twitter.com/"+authData.twitter.username;
 			            	var theUser = new User(); theUser.getRef().child("users").child(user.uid).child("profile_information").set(user);
 
 	            			break;
@@ -136,5 +136,49 @@ var User = function(){
         });
     };
 
+    this.primaryUser = {}
+    this.secondaryUser = {};
+    this.postImageURL = [];
+    this.onLoad = false;
+
+    this.setPrimaryUser = function(obj){
+    	this.primaryUser = obj;
+    };
+
+    this.getPrimaryUser = function(){
+    	return this.primaryUser;
+    };
+
+    this.setSecondaryUser = function(obj){
+    	this.secondaryUser = obj;
+    };
+
+    this.getSecondaryUser = function(){
+    	return this.secondaryUser;
+    };
+
+    this.setPostImageURL = function(value){
+    	this.postImageURL.push(value);
+    };
+
+    this.getPostImageURL = function(){
+    	if(this.postImageURL[0] === undefined){
+    		return false;
+    	} else {
+    		return this.postImageURL;
+    	};
+    };
+
+    this.resetPostImageURL = function(){
+    	this.postImageURL = [];
+    };
+
+    this.getLoading = function(){
+    	return this.onLoad;
+    };
+
+    this.setLoading = function(value){
+    	this.onLoad = value;
+    };
 
 };

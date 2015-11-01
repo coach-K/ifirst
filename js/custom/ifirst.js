@@ -8,6 +8,6 @@ var Ifirst = function(){
 	//Returns Firebase Reference
 	this.getRef = function(){ return ref; };
 
-	this.routeTo = function(route) { window.location.href = '/' + route; };
+	this.routeTo = function(route) { window.location.href = '' + route; };
 
 };
