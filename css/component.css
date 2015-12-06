@@ -537,9 +537,7 @@ html, body, .perspective {
 	top: 75%;
 }
 
-.container {
-	background: url("../images/background03.jpg") no-repeat fixed center center / cover;
-}
+
 
 .effect-laydown .outer-nav a {
 	opacity: 0;
